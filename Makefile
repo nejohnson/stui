@@ -19,7 +19,7 @@ CFLAGS       += -DSTUI_USE_FORMAT
 
 LDFLAGS      += -Losal -lpthread -lrt
 
-OBJS += testapp.o
+OBJS         += testapp.o
 
 BUILD_DIR     = build
 
@@ -61,8 +61,8 @@ testapp: $(BUILD_DIR) osal/libosal.a $(OBJS) build/format.o
 build/testapp.o: test/testapp.c
 	$(CC) -c $(CFLAGS) $< -o $@
 
-#build/format.o: ../format/src/format.c
-#	$(CC) -c $(CFLAGS) $< -o $@
+build/format.o: modules/format/src/format.c
+	$(CC) -c $(CFLAGS) $< -o $@
 	
 clean:
 	rm -rf $(BUILD_DIR)
