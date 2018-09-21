@@ -614,7 +614,7 @@ extern void stui_cb_putchar( STUI_WINDOW_T hWnd,
 
 #if defined( STUI_USE_FORMAT )
 
-#include "format.h"
+#include "modules/format/src/format.h"
 
 /** data structure type for holding output data **/
 struct cb_out {

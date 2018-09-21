@@ -2,7 +2,7 @@
 #
 # Makefile for STUI.  GCC variant.
 #
-# Copyright (C) 2011 Neil Johnson  <www.njohnson.co.uk>
+# Copyright (C) 2011-2018 Neil Johnson  <www.njohnson.co.uk>
 #
 ###############################################################################
 
@@ -14,8 +14,6 @@ CC = gcc
 CFLAGS       += -std=c99 -pedantic -funsigned-bitfields -Wundef
 CFLAGS       += -O2 -g
 CFLAGS       += -I./include -I./driver -I. -I./osal
-CFLAGS       += -D_XOPEN_SOURCE=600 -D_POSIX_C_SOURCE=200112L
-CFLAGS       += -DSTUI_USE_FORMAT
 
 LDFLAGS      += -Losal -lpthread -lrt
 
